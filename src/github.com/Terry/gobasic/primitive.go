@@ -2,13 +2,21 @@ package main
 
 import (
 	"fmt"
-	"github.com/Terry/caplower"
+	"github.com/Terry/checks"
 	"math"
 	"strconv"
 )
 
 func main() {
 
+}
+
+func scopeIfElse() {
+	if a := 100; a != 100 {
+
+	} else {
+		fmt.Println(a)
+	}
 }
 
 //float is the approximation of decimal
@@ -48,7 +56,7 @@ func checkCapLower() {
 
 	//not in the same package
 	//can't see unless the element is capitalized
-	bDoctor := caplower.Doctor{
+	bDoctor := checks.Doctor{
 		Number:     1,
 		DoctorName: "Emma",
 	}

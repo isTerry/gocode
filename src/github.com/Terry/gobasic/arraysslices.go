@@ -26,6 +26,8 @@ func cutSlices() {
 	//	1 2 3 4 5==>1 2 [3] 4 5==>1 2 4 4 5
 	//	append here is moving 4 into the existing 3's location
 	//	no need to allocate, b is pointing to a
+	//	so be careful if there is another reference to a
+	//	if don't wanna change a, use loop and do a copy
 	//b := append(a[:2], a[3:len(a)-1]...)
 
 	//[1 2 3 4 5] / [1 2 1 2 3 4 5]
@@ -194,3 +196,5 @@ func arrayDefine() {
 	ids[0] = 4
 	fmt.Printf("%v,%T,%v,%v", ids, ids, cap(ids), len(ids))
 }
+
+//TODO list.List
